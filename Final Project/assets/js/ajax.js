@@ -71,8 +71,6 @@ const getRequestObject = function () {
 $("#go").click(function () {
     const requestObject = getRequestObject();
 
-    alert(JSON.stringify(getRequestObject()));
-
     $.ajax({
         url: "/app",
         type: 'get',
