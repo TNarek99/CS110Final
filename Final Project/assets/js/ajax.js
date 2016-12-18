@@ -85,30 +85,12 @@ $("#go").click(function () {
             $("#container").html("");
 
             for (var index = 0; index < data.length; index++) {
-                if (index % 3 == 0) {
                     $("#container").append('<div class="row">' +
                         '<div class="unis col-md-12 col-xs-12 col-sm-12 col-lg-12"> <h3>'+data[index].name+'</h3>' +
                         ' <p>Acceptance Rate:'+data[index].acceptance_rate+'</p> ' +
                         ' <p>Tuition Fee:'+data[index].tuition_fee+'</p> ' +
                         ' <p>UGRAD enrollment:'+data[index].total_enrollement+'</p> ' +
-                        '</div>  ');
-                }
-
-                if (index % 3 == 1) {
-                    $("#container").append('<div class="unis col-md-12 col-xs-12 col-sm-12 col-lg-12"> <h3>'+data[index].name+'</h3>' +
-                        ' <p>Acceptance Rate:'+data[index].acceptance_rate+'</p> ' +
-                        ' <p>Tuition Fee:'+data[index].tuition_fee+'</p> ' +
-                        ' <p>UGRAD enrollment:'+data[index].total_enrollement+'</p> ' +
-                        '</div>');
-                }
-
-                if (index % 3 == 2) {
-                    $("#container").append('<div class="unis col-md-12 col-xs-12 col-sm-12 col-lg-12"> <h3>'+data[index].name+'</h3>' +
-                        ' <p>Acceptance Rate:'+data[index].acceptance_rate+'</p> ' +
-                        ' <p>Tuition Fee:'+data[index].tuition_fee+'</p> ' +
-                        ' <p>UGRAD enrollment:'+data[index].total_enrollement+'</p> ' +
-                        '</div></div>');
-                }
+                        '</div></div>  ');
             }
         },
 
