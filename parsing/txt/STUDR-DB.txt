@@ -1,0 +1,35 @@
+1. Name
+2. Application deadline
+4. Application fee
+6. Acceptance rate
+24. Total applicants
+30. Applicants accepted
+36. Freshman enrollement
+38. Female freshman
+40. Male freshman
+57. Waitlist (Yes or No)
+59. Waitlist (number of Students in it)
+63. Accepted students number from waitlist
+69. Percent of students who are in Top 10% in their class
+71. Percent of students who are in Top 25% in their class
+73. Percent of students who are in Top 50% in their class
+80. Average High school GPA
+84-91. GPA breakdown
+96. SAT Critical reading average
+100-105. SAT Critical reading breakdown
+107. SAT Math average
+111-116. SAT Math breakdown
+118. SAT Writing average
+127. ACT Composite average
+131-136. ACT Composite breakdown
+138. ACT English 25%-75% percentile
+140-145. ACT English breakdown
+147. ACT Math 25%-75% percentile
+149-154. ACT Math breakdown
+156. ACT Reading 25%-75% percentile
+158-163. ACT Reading breakdown
+165. ACT Science 25%-75% percentile
+167-172. ACT Science breakdown
+248. Tuition fee
+249. Room and boards
+250. Total enrollement

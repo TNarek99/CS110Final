@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="https://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/finalproject.css" rel="stylesheet">
+    
+</head>
+
+<body>
+  <header id="staticheader">
+    <label onclick="openNav()" id="slidelabel">&#9776;</label> 
+    <input id="gensearchinput" type="text" placeholder="Enter a university">
+  </header>
+
+  <header id="container">
+
+
+</header>
+
+
+  <div id="mySidenav" class="sidenav">
+    <label class="closebtn" onclick="closeNav()">&times;</label>
+    
+    <li class="noborderli"></li>
+    <li class="mylis" id="gpali"><a href="#" id="gpa">GPA</a>
+      <input class="srchinput" id="gpaInput" type="number"></li>
+
+    <li class="mylis" id="testli"><a href="#" id="Intest">International Test</a>
+      <div id="listoftestsdiv">
+        <p class="listoftests" id="ACTc">ACT Composite<input class="testinput" id="actCompositeInput" type="number"></p>
+        <p class="listoftests" id="ACTe">ACT English<input class="testinput" id="actEnglishInput" type="number"></p>
+        <p class="listoftests" id="ACTm">ACT Math<input class="testinput" id="actMathInput" type="number"></p>
+        <p class="listoftests" id="ACTr">ACT Reading<input class="testinput" id="actReadingInput" type="number"></p>
+        <p class="listoftests" id="ACTs">ACT Science<input class="testinput" id="actScienceInput" type="number"></p>
+        <p class="listoftests" id="SATc">SAT Critical reading<input class="testinput" id="satReadingInput" type="number"></p>
+        <p class="listoftests" id="SATminput">SAT Math<input class="testinput" id="satMathInput" type="number"></p>
+        <p class="listoftests" id="SATwinput">SAT Writing<input class="testinput" id="satWritingInput" type="number"></p>
+      </div></li>
+
+    <li class="mylis" id="rateli"><a href="#" id="rate">Acceptance Rate</a>
+      <input class="srchinput ratesrch" id="rateMin" type="number" placeholder="from"><input class="srchinput ratesrch input2" id="rateMax" type="number" placeholder="to"></li>
+
+    <li class="mylis" id="stNli"><a href="#" id="Stnumber">Students Number</a>
+      <input class="srchinput stnumbersrch" id="studentsNumberMin" type="number" placeholder="from"><input class="srchinput stnumbersrch input2" id="studentsNumberMax" type="number" placeholder="to"></li>
+
+    <li class="mylis" id="feeli"><a href="#" id="fee">Finances</a>
+      <input class="srchinput" id="financesInput" type="number" placeholder="Maximum financial resources"><p id="feeoption">*Advanced Options</p><input type="text" class="advancedfee" id="tuitionFeeInput" placeholder="Tuition Fee"><input type="text" class="advancedfee" id="roomsFeeInput" placeholder="Room and board"></li>
+  
+    <li class="mylis" id="appfeeli"><a href="#" id="appfee">Application Fee</a>
+    <input class="srchinput" id="appFeeInput" type="number"></li>
+
+    <li class="mylis" id="deadlineli"><a href="#" id="deadline">Dates and Deadlines</a>
+      <input class="srchinput deadlinesrch" id="appDeadlineInput" type="date"></li>
+
+    <li class="mylis" id="sportli"><a href="#" id="Sports">Sports</a></li>
+
+    <li class="mylis" id="otherli"><a href="#" id="other">Other</a>
+      <div id="otherdiv">
+        <p class="listofother" id="loc">Location<input class="otherinput" id="locinput" type="text"></p>
+        <p class="listofother" id="rank">Ranking<input class="otherinput" id="rankinput" type="number"></p>
+      </div>
+    </li>
+
+    <li id="addli" class="noborderli mylis"><a href="#">Add Filter</a></li>
+
+    <button id="go">GO</button>
+  </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
+    <script src="assets/js/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "330px";
+    document.getElementById("container").style.marginLeft = "330px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("container").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
+}
+
+$("body").click(function(){
+  closeNav();
+});
+
+// Prevent events from getting pass .popup
+$("#mySidenav").click(function(e){
+  e.stopPropagation();
+});
+$("#slidelabel").click(function(e){
+  e.stopPropagation();
+});
+
+
+
+$("#gpa").click(function(){
+  $("#gpali").toggleClass("toggle_class");
+  document.getElementById("gpali").style.transition = "height .2s ease-in";
+  setTimeout(function(){
+    $("#gpaInput").toggle();
+  },110); 
+});
+
+$("#Intest").click(function(){
+  $("#testli").toggleClass("toggle_class_test");
+  document.getElementById("testli").style.transition = "height .15s linear";
+  setTimeout(function(){
+    $("#listoftestsdiv").toggle();
+    $("#testinput").toggle();
+  }, 90);
+});
+
+$("#rate").click(function(){
+  $("#rateli").toggleClass("toggle_class");
+  document.getElementById("rateli").style.transition = "height .2s ease-in";
+  setTimeout(function(){
+    $(".ratesrch").toggle();
+  },110); 
+});
+
+$("#Stnumber").click(function(){
+  $("#stNli").toggleClass("toggle_class");
+  document.getElementById("stNli").style.transition = "height .2s ease-in";
+  setTimeout(function(){
+    $(".stnumbersrch").toggle();
+  },110); 
+});
+
+$("#fee").click(function(){
+  $("#feeli").toggleClass("toggle_class_fee");
+  document.getElementById("feeli").style.transition = "height .2s ease-in";
+  setTimeout(function(){
+    $("#financesInput").toggle();
+    $("#feeoption").toggle();
+  },125); 
+});
+
+$("#feeoption").click(function(){
+  $("#feeli").toggleClass("toggle_class_fee2");
+  document.getElementById("feeli").style.transition = "height .2s ease-in";
+  setTimeout(function(){
+    $("#financesInput").toggle();
+    $(".advancedfee").toggle();
+  },125); 
+});
+
+$("#appfee").click(function(){
+  $("#appfeeli").toggleClass("toggle_class");
+  document.getElementById("appfeeli").style.transition = "height .2s ease-in";
+  setTimeout(function(){
+    $("#appFeeInput").toggle();
+  },125); 
+});
+
+$("#deadline").click(function(){
+  $("#deadlineli").toggleClass("toggle_class");
+  document.getElementById("deadlineli").style.transition = "height .2s ease-in";
+  setTimeout(function(){
+    $(".deadlinesrch").toggle();
+  },120); 
+});
+
+$("#other").click(function(){
+  $("#otherli").toggleClass("toggle_class_other");
+  document.getElementById("otherli").style.transition = "height .2s ease-in";
+  setTimeout(function(){
+    $("#otherdiv").toggle();
+    $("#otherinput").toggle();
+  },90); 
+});
+
+</script>
+<script src="assets/js/ajax.js"></script>
+</body>
+</html>

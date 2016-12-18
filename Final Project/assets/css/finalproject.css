@@ -1,0 +1,436 @@
+body {
+	height:100vh; /*whole display*/
+	font-family: sans-serif;
+	overflow: auto; /* Enable scroll if needed */
+	overflow-x: hidden;
+}
+
+#staticheader {
+	height: 7%;
+	width: 100%;
+	background-color: #204060; /*dark blue*/
+	position: fixed;
+}
+
+#slidelabel {
+	padding: .5% 1% .6% 1%;
+	height: 7%;
+	float: left;
+	font-size: 170%;
+	border-radius: 15%;
+	cursor: pointer;
+	color: #ebebe0; /*ligth blue*/
+	background-color: #204060; /*dark blue*/
+	z-index: 5;
+	position: fixed;
+}
+
+#gensearchinput {
+	border-radius: 70px;
+	padding: 1.3% 1.2% 1.5% 1.8%;
+	margin: .3% -19.5%;
+	height: 5%;
+	width: 3%;
+	background: #204060; /*dark blue*/
+	background-image: url(../../assets/img/search.png);
+	background-size: 55%;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 115%;
+	color: white;
+	font-weight: 300;
+	text-indent: 3%;
+	right: 21%;
+	z-index: 8;
+	position: fixed;
+	outline: 0%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#gensearchinput:focus {
+    width: 30%;
+    border-box: none;
+    background-position: 2%;
+    background-size: 5.5%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    background-color: #204060; /*dark blue*/
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.8s;
+}
+
+.sidenav .closebtn {
+	color: #e6e6e6; /*almost white*/
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav .closebtn:hover {
+	color: #999900; /*green*/
+}
+
+.mylis {
+	height: 68px;
+	list-style-type: none;
+	font-size: 20px;
+	padding-top: 20px;
+	border-bottom: 1px solid #ebebe0; /*ligth blue*/
+	z-index: 5;
+}
+
+.mylis:hover {
+	background-color: #999900; /*green*/
+}
+
+.sidenav a {
+    padding: 0px 0px 0px 60px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #e6e6e6; /*almost white*/
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #204060; /*dark blue*/
+}
+
+.srchinput {
+	display: none;
+	border-radius: 7px;
+	font-size: 70%;
+	background-color: #ebebe0; /*ligth blue*/
+	color: #2e2e1f;
+	width: 25%;
+	height: 19px;
+	margin-bottom: 1%;
+	margin-left: 19%;
+	text-indent: 5%;
+}
+
+#gpa {
+	background-image: url(../../assets/img/graduation-logo.png);
+	background-size: 10%;
+	background-repeat: no-repeat;
+	background-position: 15px, 3px;
+}
+
+#Intest {
+	background-image: url(../../assets/img/test.png);
+	background-size: 10%;
+	background-repeat: no-repeat;
+	background-position: 15px, 3px;
+}
+
+#listoftestsdiv {
+	margin-left: 22%;
+	margin-top: 1%;
+	font-size: 80%;
+	color: #e6e6e6; /*almost white*/
+	display: none;
+}
+
+.listoftests {
+	padding-top: 5%;
+	padding-right: 15%;
+	margin-bottom: 2%;
+}
+
+.listoftests:hover {
+	color: #204060; /*dark blue*/
+	cursor: pointer;
+}
+
+.listofother {
+	font-size: 110%;
+}
+
+.testinput {
+	border-radius: 7px;
+	background-color: #ebebe0; /*ligth blue*/
+	color: #2e2e1f;
+	width: 75px;
+	height: 19px;
+	margin-right: -5%;
+	float: right;
+/*	margin-top: 0px;*/
+}
+
+#rate {
+	background-image: url(../../assets/img/rate.png);
+	background-size: 7%;
+	background-repeat: no-repeat;
+	background-position: 20px, 3px;
+}
+
+#Stnumber {
+	background-image: url(../../assets/img/students.png);
+	background-size: 9%;
+	background-repeat: no-repeat;
+	background-position: 18px, 3px;
+}
+
+/*#Location {
+	background-image: url(../../assets/img/location.png);
+	background-size: 10%;
+	background-repeat: no-repeat;
+	background-position: 15px, 3px;
+}*/
+
+#outoftown {
+	color: #ebebe0; /*ligth blue*/
+	font-size: 70%;
+	margin-left: 59%;
+	margin-top: -7%;
+	display: none;
+}
+
+#loccheckbox {
+	display: none;
+	/*border-radius: 550px !important;*/
+	background-color: #ebebe0; /*ligth blue*/
+	width: 50px;
+	height: 15px;
+	margin-right: -11px;
+}
+
+#fee {
+	background-image: url(../../assets/img/money-bag.png);
+	background-size: 8%;
+	background-repeat: no-repeat;
+	background-position: 19px, 3px;
+}
+
+#feesrch {
+	width: 70%;
+}
+
+#feeoption{
+	color: #ebebe0; /*ligth blue*/
+	text-decoration: underline;
+	font-style: oblique;
+	font-size: 90%;
+	margin-left: 20%;
+	margin-top: 4%;
+	display: none;
+}
+
+.advancedfee {
+	display: none;
+	border-radius: 7px;
+	background-color: #ebebe0; /*ligth blue*/
+	width: 35%;
+	height: 15%;
+	font-size: 70%;
+	margin-left: 22%;
+}
+
+#feeoption:hover {
+	color: #204060; /*dark blue*/
+	cursor: pointer;
+}
+
+#appfee {
+	background-image: url(../../assets/img/dollar.png);
+	background-size: 8%;
+	background-repeat: no-repeat;
+	background-position: 19px, 3px;
+}
+
+#deadline {
+	background-image: url(../../assets/img/deadline.png);
+	background-size: 9%;
+	background-repeat: no-repeat;
+	background-position: 19px, 3px;
+}
+
+.deadlinesrch {
+	width: 48% !important;
+}
+
+/*#Ranking {
+	background-image: url(../../assets/img/ranking.png);
+	background-size: 7%;
+	background-repeat: no-repeat;
+	background-position: 24px, 3px;
+}*/
+
+#Sports {
+	background-image: url(../../assets/img/ball.png);
+	background-size: 7%;
+	background-repeat: no-repeat;
+	background-position: 22px, -10px;
+}
+
+#otherdiv {
+	margin-left: 22%;
+	margin-top: 1%;
+	font-size: 80%;
+	color: #e6e6e6; /*almost white*/
+	display: none;
+}
+
+.listofother {
+	padding-top: 5%;
+	padding-right: 15%;
+	margin-bottom: 2%;
+}
+
+.listofother:hover {
+	color: #204060; /*dark blue*/
+	cursor: pointer;
+}
+
+.otherinput {
+	border-radius: 7px;
+	background-color: #ebebe0; /*ligth blue*/
+	width: 75px;
+	height: 19px;
+	margin-right: -5%;
+	float: right;
+/*	margin-top: 0px;*/
+}
+
+#addli {
+	background-image: url(../../assets/img/add.png);
+	background-size: 6%;
+	background-repeat: no-repeat;
+	background-position: 24px;
+	border-bottom: none;
+}
+
+#go {
+	float: right;
+	padding: 1% 26%;
+	margin-right: 18%;
+	text-align: center;
+	color: #e6e6e6; /*almost white*/
+	background-color: #204060; /*dark blue*/
+	border:1px solid #e6e6e6; /*almost white*/
+	font-size: 150%;
+}
+
+#go:hover {
+	background-color: #e6e6e6; /*almost white*/
+	color: #204060; /*dark blue*/
+	transition: .2s;
+}
+
+.input2 {
+	margin-left: 2%;
+}
+
+.toggle_class{
+	height: 90px; 
+}
+
+.toggle_class_test{
+	height: 375px; 
+}
+
+.toggle_class_loc{
+	height: 120px; 
+}
+
+.toggle_class_fee{
+	height: 130px; 
+}
+
+.toggle_class_fee2{
+	height: 165px; 
+}
+
+.toggle_class_other{
+	height: 150px; 
+}
+
+#container {
+    transition: margin-left .5s;
+    padding-top: 7%;
+    margin-right: 1%;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: right;
+    margin-right: 2%;
+    padding: 10px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: center;
+}
+.menu li {
+    padding: 9px;
+    margin-bottom: 7px;
+    background-color: #1E4868; /*blue*/
+    font-size: 120%;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+	color: #1E4868; /*blue*/
+    background-color: #ebebe0; /*ligth blue*/
+}
+
+.unis {
+    background-color: #e6e6e6; /*almost white*/
+    color: #31343D;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+	margin-left: 5%;
+    margin-top: 4%;
+    box-shadow: 3px 3px 3px;
+}
+
+#logo {
+	margin-top: 4%;
+}
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 36%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 750px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 95%;
+    }
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav*/
+@media screen and (max-height: 490px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    .mylis {height: 60px;}
+    #staticheader {height: 37px;}
+}
