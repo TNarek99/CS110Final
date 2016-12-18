@@ -2,6 +2,56 @@ const compareDates = function (latest, deadline) {
     return new Date(latest) >= new Date(deadline);
 };
 
+const createDate = function (dateString) {
+    const dateParts = dateString.split("-");
+    const monthNum = dateParts[1];
+    const dayNum = dateParts[2];
+
+    var monthString;
+
+    switch(monthNum) {
+        case "01":
+            monthString = "jan";
+            break;
+        case "02":
+            monthString = "feb";
+            break;
+        case "03":
+            monthString = "mar";
+            break;
+        case "04":
+            monthString = "apr";
+            break;
+        case "05":
+            monthString = "may";
+            break;
+        case "06":
+            monthString = "jun";
+            break;
+        case "07":
+            monthString = "jul";
+            break;
+        case "08":
+            monthString = "aug";
+            break;
+        case "09":
+            monthString = "sep";
+            break;
+        case "10":
+            monthString = "oct";
+            break;
+        case "11":
+            monthString = "nov";
+            break;
+        case "12":
+            monthString = "dec";
+            break;
+    }
+
+    const result = monthString + " " + dayNum;
+    return result;
+};
+
 const filterByGpa = function (universities, gpa) {
     const result = [];
 
@@ -250,7 +300,7 @@ const filterByApplicationFee=function(universities, min, max)
         });
     }
 
-    return result
+    return result;
 };
 
 const filterByAcceptanceRate= function(universities, info)
@@ -275,6 +325,8 @@ const filterByAcceptanceRate= function(universities, info)
 
 const filterByApplicationDeadline = function (universities, latest) {
     const result=[];
+    latest = createDate(latest);
+    console.log(latest);
 
     if (universities != undefined) {
         universities.forEach(function (university) {
