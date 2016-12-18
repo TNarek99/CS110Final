@@ -77,17 +77,15 @@ const filterByActEnglish = function (universities, score) {
 
     if (universities != undefined) {
         universities.forEach(function (university) {
-            const result = [];
 
             const range = university.act_english__percentile;
-            if (range == "N/A") {
-                return universities;
-            } else {
+            if (range.indexOf("N/A") == -1) {
                 const peaks = range.split("-");
                 const firstNum = parseInt(peaks[0]);
                 const secondNum = parseInt(peaks[1]);
 
                 const avg = (firstNum + secondNum) / 2;
+
                 if (avg <= parseInt(score)) {
                     result.push(university);
                 }
@@ -104,12 +102,9 @@ const filterByActMath = function (universities, score) {
 
     if (universities != undefined) {
         universities.forEach(function (university) {
-            const result = [];
 
             const range = university.act_math__percentile;
-            if (range == "N/A") {
-                return universities;
-            } else {
+            if (range.indexOf("N/A") == -1) {
                 const peaks = range.split("-");
                 const firstNum = parseInt(peaks[0]);
                 const secondNum = parseInt(peaks[1]);
@@ -131,12 +126,9 @@ const filterByActReading = function (universities, score) {
 
     if (universities != undefined) {
         universities.forEach(function (university) {
-            const result = [];
 
             const range = university.act_reading__percentile;
-            if (range == "N/A") {
-                return universities;
-            } else {
+            if (range.indexOf("N/A") == -1) {
                 const peaks = range.split("-");
                 const firstNum = parseInt(peaks[0]);
                 const secondNum = parseInt(peaks[1]);
@@ -157,12 +149,9 @@ const filterByActScience = function (universities, score) {
 
     if (universities != undefined) {
         universities.forEach(function (university) {
-            const result = [];
 
             const range = university.act_science__percentile;
-            if (range == "N/A") {
-                return universities;
-            } else {
+            if (range.indexOf("N/A") == -1) {
                 const peaks = range.split("-");
                 const firstNum = parseInt(peaks[0]);
                 const secondNum = parseInt(peaks[1]);
